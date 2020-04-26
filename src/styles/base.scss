@@ -1,0 +1,46 @@
+@import './variables';
+
+/* Base styles */
+html {
+  font-size: 16px; //base rem
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Manrope', -apple-system, 'BlinkMacSystemFont', 'Segoe UI',
+    'Work Sans', 'Oxygen-Sans', 'Cantarell', 'Helvetica Neue', sans-serif;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  width: 100%;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[role='button'] {
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}

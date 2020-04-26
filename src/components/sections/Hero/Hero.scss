@@ -1,0 +1,41 @@
+@import '../../../styles/variables';
+
+.hero-wrapper {
+  width: 100%;
+  background-color: #111111;
+  background-image: url('https://source.unsplash.com/P1qyEf1g0HU/1600x900');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+
+  .hero {
+    min-height: calc(100vh - 75px);
+    backdrop-filter: grayscale(0.75) blur(2px);
+    padding: 1rem;
+    text-align: center;
+
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+      grid-auto-rows: auto;
+      grid-gap: 1rem;
+      justify-content: center;
+      padding: 1.5rem 0.7rem;
+      width: 100%;
+    }
+
+    &__card {
+      border: 1px solid rgba($color: #fafafa, $alpha: 0.5);
+      padding: 2rem;
+      border-radius: 5px;
+
+      i {
+        font-size: 3rem;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

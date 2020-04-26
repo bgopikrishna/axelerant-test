@@ -1,0 +1,100 @@
+@import '../../../styles/variables';
+
+@mixin navlink {
+  padding: 1rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  vertical-align: middle;
+  position: relative;
+
+  &.active,
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.nav-wrapper {
+  padding: 1rem;
+  background: #161513;
+  color: $white;
+  height: 100%;
+
+  .nav {
+    &__logo {
+      font-size: 2rem;
+
+      &__icon {
+        margin: auto 1rem;
+        color: $primary;
+      }
+    }
+
+    &__links.mobile {
+      display: none;
+      height: 0%;
+      transition: height 0.3s ease;
+    }
+
+    &__link {
+      @include navlink();
+
+      &--cta {
+        @include navlink();
+
+        background: $primary;
+        border-radius: 15px;
+        padding: 0.5rem 2rem;
+
+        span {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .ham-menu {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: $primary;
+    background: transparent;
+    padding: 0px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav-wrapper {
+    flex-direction: column !important;
+    align-items: flex-start;
+
+    .nav {
+      &__logo {
+        margin-right: auto;
+      }
+      &__links {
+        display: none;
+        height: 0px;
+      }
+
+      &__links.mobile {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        transition: height 0.3s ease;
+        width: 100%;
+        padding: 1rem;
+      }
+
+      &__item {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .ham-menu {
+      display: block;
+    }
+  }
+}

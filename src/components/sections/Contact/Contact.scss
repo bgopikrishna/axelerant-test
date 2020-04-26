@@ -1,0 +1,90 @@
+@import '../../../styles/variables';
+
+.contact-container {
+  width: 100%;
+  padding: 8rem 0;
+
+  .contact {
+    width: 50%;
+    padding: 40px 20px;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center;
+    p {
+      margin: 2rem auto;
+    }
+    h2 {
+      margin-bottom: 2rem;
+      font-size: 3rem;
+    }
+    form {
+      display: flex;
+      justify-content: space-around;
+
+      width: 70%;
+      margin: 20px auto;
+    }
+
+    form input {
+      width: 60%;
+      background: white;
+      border: 1px solid $white;
+      border-radius: 12px;
+      height: 40px;
+      padding: 5px 20px;
+      box-sizing: border-box;
+      z-index: 7;
+      transition: all 0.3s ease-in-out;
+      border: 1px solid rgba($color: $primary, $alpha: 0.7);
+      box-shadow: 0px 0px 7px $primary;
+      outline: none;
+
+      &:focus {
+        box-shadow: none;
+        border: 1px solid $primary;
+      }
+    }
+
+    form button {
+      background: $primary;
+      border: none;
+      color: $white;
+      font-size: 14px;
+      font-weight: bolder;
+      border-radius: 15px;
+      height: 40px;
+      width: 35%;
+      padding: 5px 10px;
+      box-sizing: border-box;
+      box-shadow: 4px 4px 4px $primary;
+      z-index: 9999;
+      transform-origin: 0%;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        background: $white;
+        box-shadow: none;
+        color: $primary;
+        border: 1px solid $primary;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-container .contact {
+    width: 100%;
+
+    form {
+      flex-direction: column;
+
+      input,
+      button {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem 2rem;
+
+  &__content {
+    line-height: 2;
+    padding: 1rem 2rem;
+    max-width: 50%;
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__banner {
+    clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .team {
+    flex-direction: column;
+
+    &__content {
+      max-width: 100%;
+      padding: 1rem;
+    }
+
+    &__banner {
+      clip-path: none;
+    }
+  }
+}
